@@ -38,7 +38,7 @@ def price_updater():
         ib.sleep(1)
 
         if len(ticks) == 0:
-    continue
+           continue
 
 price = ticks[-1].price
 
