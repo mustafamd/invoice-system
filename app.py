@@ -46,7 +46,7 @@ if price is None or price == 0:
 
 print("PRICE:", price)
 now = int(time.time())
-        minute = now - (now % 60)
+minute = now - (now % 60)
 if current_candle is None:
             current_candle = {
                 "time": minute,
