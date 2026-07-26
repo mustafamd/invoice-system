@@ -42,7 +42,7 @@ def price_updater():
 
 price = ticks[-1].price
 if price is None or price == 0:
-            continue
+   continue
 
 print("PRICE:", price)
 now = int(time.time())
