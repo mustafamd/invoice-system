@@ -44,7 +44,7 @@ price = ticks[-1].price
 if price is None or price == 0:
             continue
 
-        print("PRICE:", price)
+print("PRICE:", price)
 
         now = int(time.time())
         minute = now - (now % 60)
