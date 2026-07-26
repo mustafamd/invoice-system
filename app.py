@@ -40,11 +40,12 @@ def price_updater():
         if len(ticks) == 0:
            continue
 
-price = ticks[-1].price
-if price is None or price == 0:
-   continue
 
-print("PRICE:", price)
+
+print("PRICE:", price)if price is None or price == 0:
+    pass
+else:
+    now = int(time.time())
 now = int(time.time())
 minute = now - (now % 60)
 if current_candle is None:
