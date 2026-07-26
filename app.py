@@ -41,8 +41,7 @@ def price_updater():
            continue
 
 price = ticks[-1].price
-
-        if price is None or price == 0:
+if price is None or price == 0:
             continue
 
         print("PRICE:", price)
