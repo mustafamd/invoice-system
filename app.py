@@ -45,11 +45,9 @@ if price is None or price == 0:
             continue
 
 print("PRICE:", price)
-
-        now = int(time.time())
+now = int(time.time())
         minute = now - (now % 60)
-
-        if current_candle is None:
+if current_candle is None:
             current_candle = {
                 "time": minute,
                 "open": price,
@@ -57,8 +55,7 @@ print("PRICE:", price)
                 "low": price,
                 "close": price
             }
-
-        elif minute != current_candle["time"]:
+elif minute != current_candle["time"]:
             candles.append(current_candle)
             current_candle = {
                 "time": minute,
@@ -67,8 +64,7 @@ print("PRICE:", price)
                 "low": price,
                 "close": price
             }
-
-        else:
+else:
             current_candle["high"] = max(current_candle["high"], price)
             current_candle["low"] = min(current_candle["low"], price)
             current_candle["close"] = price
